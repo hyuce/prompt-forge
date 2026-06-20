@@ -63,7 +63,7 @@ sequenceDiagram
 | Classification | None | 5-type router |
 | Verification | None | 4-test post-check |
 | Reasoning cues | None | Conditional (decision prompts) |
-| Token footprint | ~169 lines | ~158 lines (more features, less text) |
+| Token footprint | ~169 lines | ~196 lines (more features, less text) |
 
 ## Usage
 

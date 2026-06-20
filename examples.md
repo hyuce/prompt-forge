@@ -128,6 +128,8 @@ for prioritisation.
 
 ## Example 4: Back Pain (Informational)
 
+**Pipeline:** Audit: pass | Classify: Informational | Mode: Automatic | Verify: pass
+
 **Original:** "My back hurts, what should I do?"
 
 **Expert rewrite:** "Provide guidance on managing back pain. Cover: how to assess
@@ -143,6 +145,8 @@ categories specified. Scope limitations acknowledged.
 ---
 
 ## Example 5: Eating Healthier (Informational + Action)
+
+**Pipeline:** Audit: pass | Classify: Informational + Action | Mode: Automatic | Verify: pass
 
 **Original:** "Help me eat healthier"
 
@@ -160,6 +164,8 @@ named (high-impact, evidence-based). Optimisation target set. Failure modes anti
 
 ## Example 6: Productivity (Analytical)
 
+**Pipeline:** Audit: pass | Classify: Analytical | Mode: Automatic | Verify: pass
+
 **Original:** "Help me be more productive"
 
 **Expert rewrite:** "I want to improve my personal productivity. Approach this as
@@ -175,6 +181,8 @@ Success criteria included.
 ---
 
 ## Example 7: Teenager Communication (Informational)
+
+**Pipeline:** Audit: pass | Classify: Informational | Mode: Automatic | Verify: pass
 
 **Original:** "My teenager won't listen to me"
 
@@ -193,6 +201,8 @@ requested. Both what-to-avoid and what-works specified.
 
 ## Example 8: Short Story (Creative)
 
+**Pipeline:** Audit: pass | Classify: Creative | Mode: Automatic | Verify: pass
+
 **Original:** "Write me a short story"
 
 **Expert rewrite:** "Write a short story of around 2,000 words. Aim for literary
@@ -207,6 +217,8 @@ direction given while leaving creative freedom on subject.
 ---
 
 ## Example 9: Salary Negotiation (Action)
+
+**Pipeline:** Audit: pass | Classify: Action | Mode: Automatic | Verify: pass
 
 **Original:** "Help me negotiate my salary"
 
@@ -225,6 +237,8 @@ principles named. Specific scenarios anticipated. Fallback strategies included.
 
 ## Example 10: Machine Learning Explanation (Informational)
 
+**Pipeline:** Audit: pass | Classify: Informational | Mode: Automatic | Verify: pass
+
 **Original:** "Explain machine learning to me"
 
 **Expert rewrite:** "Explain machine learning for someone with no technical background.
@@ -240,6 +254,8 @@ requested. Honest limitations asked for. Format constraint added.
 ---
 
 ## Example 11: Cover Letter (Creative)
+
+**Pipeline:** Audit: pass | Classify: Creative | Mode: Automatic | Verify: pass
 
 **Original:** "Help me write a cover letter for a marketing job"
 
@@ -257,6 +273,8 @@ Length constraint. Input requirements indicated.
 ---
 
 ## Example 12: Website Performance (Analytical + Action)
+
+**Pipeline:** Audit: pass | Classify: Analytical + Action | Mode: Automatic | Verify: pass
 
 **Original:** "Make my website faster"
 

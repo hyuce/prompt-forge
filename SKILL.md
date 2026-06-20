@@ -23,19 +23,13 @@ User provides a prompt to improve
 - User asks to improve/refine/rewrite a prompt
 - A prompt feels vague, overloaded, or logically unsound
 - User needs help framing a request for an AI system
-- **Not for:** prompts that are already expert-level (pass through with minor tweaks)
 
-## Core Pattern
+## When NOT to Use
 
-**Before:** "Should I use PostgreSQL or MongoDB?"
-
-**After:** "Evaluate database options for my use case. Assess PostgreSQL, MongoDB,
-and any other viable alternatives against: data model fit (relational vs document),
-scalability requirements, team expertise, operational complexity, and total cost.
-Recommend based on my specific constraints — I'll provide those."
-
-**What changed:** False dichotomy expanded to include alternatives. Decision
-framework named. Constraints deferred to user input rather than assumed.
+- Prompts that are already expert-level (pass through with minor tweaks)
+- Prompts for non-NLP systems (code generation, data processing pipelines)
+- User explicitly says "don't change my wording"
+- Single-word or trivially short prompts ("translate this", "summarize")
 
 ## Quick Reference
 
@@ -125,7 +119,7 @@ additionally embed reasoning cues:
 - "State your confidence level and what would change your mind"
 - "Check whether your recommendation holds if the key assumption is wrong"
 
-These are structured reasoning instructions — do not name any framework.
+Do not name any framework.
 
 ### Step 4: Verify
 
@@ -149,20 +143,18 @@ For full transformation examples, see `examples.md`.
 
 ## Common Mistakes
 
-| Mistake | Why it happens | Fix |
-|---------|---------------|-----|
-| Amplifying a false dichotomy | "Preserve intent" misapplied | Pre-audit catches structure before rewrite |
-| Preserving loaded framing | Confusing bias with intent | Neutralise framing, preserve the *question* |
-| Numbering instead of decomposing | Surface-level decomposition | Identify dependencies, priorities, deferrals |
-| Skipping audit for "simple" prompts | "It's obviously clear" | Simple prompts hide the most errors |
-| Over-engineering simple prompts | Applying all patterns always | Router limits patterns to what's needed |
+| Mistake | Fix |
+|---------|-----|
+| Amplifying a false dichotomy | Pre-audit catches structure before rewrite |
+| Preserving loaded framing | Neutralise framing, preserve the *question* |
+| Numbering instead of decomposing | Identify dependencies, priorities, deferrals |
+| Skipping audit for "simple" prompts | Simple prompts hide the most errors |
 
 ### Rationalization Table
 
 | Excuse | Reality |
 |--------|---------|
 | "This prompt is simple, skip the audit" | Simple prompts have the most hidden assumptions. 30 seconds saves the rewrite. |
-| "User doesn't want to wait for options" | Wrong rewrite = user rewrites again. Interactive is faster overall. |
 | "Audit is overkill" | 4 questions. The alternative is an expert-sounding wrong answer. |
 | "I'm preserving their intent" | Check: are you preserving their *goal* or their *wording*? |
 | "Adding alternatives is inventing" | Expanding a false dichotomy isn't invention — it's correction. |
