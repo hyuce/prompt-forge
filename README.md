@@ -1,6 +1,6 @@
 # prompt-forge
 
-[![npm downloads](https://img.shields.io/npm/dt/skills?label=npx%20skills%20downloads)](https://www.npmjs.com/package/skills)
+[![skills.sh](https://skills.sh/b/hyuce/prompt-forge)](https://skills.sh/hyuce/prompt-forge)
 
 Transform novice prompts into expert-framed requests with logical rigor.
 
