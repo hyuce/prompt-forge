@@ -162,6 +162,7 @@ For full transformation examples, see `examples.md`.
 ## Constraints
 
 - **Preserve intent, not wording.** The goal is what they want, not how they said it.
+- **Match the original language.** Rewrite in the same language as the input prompt unless the user specifies otherwise.
 - **Don't invent requirements.** Fill gaps with defaults; don't add things they didn't imply.
 - **Correct terminology, not impressive.** Domain language clarifies — it doesn't intimidate.
 - **Match complexity to task.** Simple question → clear rewrite. Not PhD-level complexity.
