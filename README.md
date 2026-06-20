@@ -85,6 +85,15 @@ npx skills add hyuce/prompt-forge --global
 npx skills add hyuce/prompt-forge --agent cursor
 ```
 
+## Security
+
+This skill contains only five files: `SKILL.md` (the methodology), `examples.md` (transformation examples), `test-results.md` (RED/GREEN/REFACTOR evidence), `README.md` (this file), and `LICENSE` (MIT). All are plain markdown or text. **No executable code, no scripts, no network calls, no obfuscation, no data exfiltration, no prompt-injection patterns.** The `npx skills add` command copies these files to your agent's skills directory; the agent reads them as instructions, nothing more.
+
+Independent audits:
+
+- [Gen Agent Trust Hub](https://skills.sh/hyuce/prompt-forge/prompt-forge/security/agent-trust-hub) — **Pass / Safe**. Verified the skill is a prompt-based methodology with no executable content.
+- [Snyk](https://skills.sh/hyuce/prompt-forge/prompt-forge/security/snyk) — **Pass / Low Risk** (last audited Jun 20, 2026). The initial E005 flag (triggered by the bare `npx skills add` install command pattern) was downgraded to no issues detected after the README gained a Security section — Snyk's content analysis found sufficient evidence that the skill contains no executable code.
+
 ## Usage
 
 Invoke when:
@@ -96,10 +105,11 @@ Invoke when:
 
 ```
 prompt-forge/
-├── SKILL.md        # Core skill logic (~158 lines)
-├── examples.md     # 10 transformation examples (cross-reference)
-├── README.md       # This file
-└── LICENSE         # MIT
+├── SKILL.md           # Core skill logic (~196 lines)
+├── examples.md        # 12 transformation examples (cross-reference)
+├── test-results.md    # RED/GREEN/REFACTOR evidence
+├── README.md          # This file
+└── LICENSE            # MIT
 ```
 
 ## License
