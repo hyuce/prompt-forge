@@ -101,6 +101,42 @@ Invoke when:
 - User needs help framing a request for an AI system
 - A prompt feels vague, overloaded, or logically unsound
 
+### How to use it in a session
+
+1. **Load the skill:** `@prompt-forge` or read `SKILL.md`
+2. **Provide the prompt:** paste the novice prompt you want to improve
+3. **Let the pipeline run:**
+   - Pre-audit checks for logical flaws (false dichotomies, loaded questions, scope creep)
+   - Classification router identifies the prompt type (informational, creative, analytical, action, decision)
+   - Mode selection decides: automatic (single rewrite) or interactive (2-3 options)
+4. **Receive the output:**
+   - **Automatic mode:** single expert rewrite + "what changed" explanation
+   - **Interactive mode:** rationale for interactive mode, 2-3 framing options with trade-offs, you select one, then receive the full rewrite
+
+### Example session
+
+**You:** "@prompt-forge improve this prompt: 'Should I use PostgreSQL or MongoDB?'"
+
+**Skill:**
+> Processing in interactive mode because: false dichotomy detected (only two options presented when more may exist) + decision-type prompt.
+>
+> **Option A:** Compare PostgreSQL vs MongoDB directly — faster if you've already eliminated other options.
+> **Option B:** Evaluate PostgreSQL, MongoDB, and other viable alternatives — broader but may surface options you haven't considered.
+> **Option C:** Start from your requirements first, then match to databases — most thorough, avoids anchoring on any specific technology.
+>
+> Which approach fits your intent?
+
+**You:** "B"
+
+**Skill:**
+> **Expert rewrite:** "Evaluate database options for my use case. Assess PostgreSQL, MongoDB, and any other viable alternatives against: data model fit (relational vs document), scalability requirements, team expertise, operational complexity, and total cost of ownership. For each option, list what supports it and what contradicts it. Recommend based on my specific constraints — I'll provide those."
+>
+> **What changed:** False dichotomy expanded. Decision framework named. Reasoning cues embedded. Constraints deferred to user.
+
+### When the skill fights you
+
+If the pre-audit flags your prompt as flawed, that's the skill working. The friction prevents the kind of amplification that produces expert-sounding wrong answers. See the **Rationalization Table** in `SKILL.md` for the excuses the skill is designed to resist.
+
 ## Structure
 
 ```
