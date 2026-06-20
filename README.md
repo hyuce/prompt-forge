@@ -1,5 +1,7 @@
 # prompt-forge
 
+[![npm downloads](https://img.shields.io/npm/dt/skills?label=npx%20skills%20downloads)](https://www.npmjs.com/package/skills)
+
 Transform novice prompts into expert-framed requests with logical rigor.
 
 ## What This Is
@@ -64,6 +66,24 @@ sequenceDiagram
 | Verification | None | 4-test post-check |
 | Reasoning cues | None | Conditional (decision prompts) |
 | Token footprint | ~169 lines | ~196 lines (more features, less text) |
+
+## Installation
+
+```bash
+npx skills add hyuce/prompt-forge
+```
+
+This installs the skill to your agent's skills directory (Claude Code, Cursor, Gemini CLI, GitHub Copilot, OpenCode, etc.).
+
+**Global install (all projects):**
+```bash
+npx skills add hyuce/prompt-forge --global
+```
+
+**Specific agent:**
+```bash
+npx skills add hyuce/prompt-forge --agent cursor
+```
 
 ## Usage
 
