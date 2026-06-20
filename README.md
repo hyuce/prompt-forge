@@ -12,6 +12,47 @@ An AI agent skill that bridges the gap between how non-specialists phrase reques
 - **Post-transformation verification** — validates intent preservation, no invention, recognition, and proportionality
 - **Reasoning integration** — embeds structured reasoning cues into decision/analysis prompts
 
+## Pipeline
+
+```mermaid
+sequenceDiagram
+    accTitle: Prompt Forge Pipeline
+    accDescr: Sequence diagram showing the six-step transformation pipeline from novice prompt to expert-framed request, with mode selection branching and verification loop.
+
+    participant U as 👤 User
+    participant A as 🔍 Audit
+    participant R as 🗂️ Router
+    participant M as ⚖️ Mode
+    participant T as 🔧 Transform
+    participant V as ✅ Verify
+
+    U->>A: Submit novice prompt
+    A->>A: Run 4 checks<br/>(assumptions, intent,<br/>framing, scope)
+    A->>R: Pass audit results
+    R->>R: Classify prompt type<br/>(informational, creative,<br/>analytical, action, decision)
+    R->>M: Pass classification
+    M->>M: Evaluate 3 signals<br/>(classification, audit, structure)
+
+    alt < 2 complex signals
+        M->>T: Automatic mode<br/>(single rewrite)
+    else ≥ 2 complex signals
+        M-->>U: Interactive mode<br/>2-3 options + rationale
+        U->>T: Select option
+    end
+
+    T->>T: Apply expert patterns<br/>+ reasoning cues (if decision/analysis)
+    T->>V: Submit rewrite
+
+    loop Verification
+        V->>V: Run 4 tests<br/>(intent, invention,<br/>recognition, proportionality)
+        alt Fail
+            V->>T: Return for revision
+        else Pass
+            V->>U: Deliver expert rewrite
+        end
+    end
+```
+
 ## How It Differs from prompt-enhancer
 
 | Feature | prompt-enhancer | prompt-forge |

@@ -27,7 +27,7 @@ User provides a prompt to improve
 
 ## Core Pattern
 
-**Before:** "PostgreSQL mi MongoDB mi kullanmalıyım?"
+**Before:** "Should I use PostgreSQL or MongoDB?"
 
 **After:** "Evaluate database options for my use case. Assess PostgreSQL, MongoDB,
 and any other viable alternatives against: data model fit (relational vs document),

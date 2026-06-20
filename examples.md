@@ -7,7 +7,7 @@ pipeline: audit → classification → mode selection → rewrite → verificati
 
 ## Example 1: False Dichotomy (NEW — demonstrates pre-audit)
 
-**Original:** "PostgreSQL mi MongoDB mi kullanmalıyım?"
+**Original:** "Should I use PostgreSQL or MongoDB?"
 
 **Pre-audit:**
 - Assumption scan: assumes only two options exist → **flagged**
@@ -51,12 +51,12 @@ cues embedded (supporting/contradicting evidence). Constraints deferred to user.
 
 ## Example 2: Loaded Question (NEW — demonstrates fallacy neutralisation)
 
-**Original:** "React neden bu kadar kötü?"
+**Original:** "Why is React so bad?"
 
 **Pre-audit:**
 - Assumption scan: assumes React is bad → **flagged**
 - Intent consistency: goal is understanding React's trade-offs, not confirming negativity → **mismatch**
-- Framing neutrality: loaded ("bu kadar kötü") → **flagged**
+- Framing neutrality: loaded ("so bad") → **flagged**
 - Scope check: single topic → pass
 
 **Classification:** Analytical → decomposition, framework, success criteria
@@ -95,8 +95,8 @@ requested. Context-dependent assessment specified. Format constraint added.
 
 ## Example 3: Scope Creep (demonstrates decomposition)
 
-**Original:** "Bana bir e-ticaret sitesi yap, ödeme sistemi olsun, CRM
-entegrasyonu olsun, mobil app olsun, AI öneri sistemi olsun"
+**Original:** "Build me an e-commerce site with a payment system, CRM
+integration, a mobile app, and an AI recommendation engine"
 
 **Pre-audit:**
 - Assumption scan: assumes all 5 components are equal priority → **flagged**
